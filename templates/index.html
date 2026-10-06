@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>🤖 AI Sentiment Analyzer</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🤖 AI Sentiment Analyzer</h1>
+
+<p>Analyze your emotions with Artificial Intelligence</p>
+
+<textarea
+id="review"
+placeholder="Type your review here..."></textarea>
+
+<div class="buttons">
+
+<button onclick="analyzeSentiment()">🔍 Analyze</button>
+
+<button onclick="clearText()">🗑 Clear</button>
+
+</div>
+
+<div class="card">
+
+<div id="emoji">😊</div>
+
+<h2 id="prediction">Waiting...</h2>
+
+<div class="progress">
+
+<div id="bar"></div>
+
+</div>
+
+<p id="confidence">Confidence : 0%</p>
+
+</div>
+
+</div>
+
+<script src="{{ url_for('static', filename='js/script.js') }}"></script>
+
+</body>
+
+</html>
